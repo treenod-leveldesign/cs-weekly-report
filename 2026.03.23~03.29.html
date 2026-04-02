@@ -1,0 +1,819 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CS Report — 2026.03.23~03.29</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans KR',sans-serif;background:#f5f4f1;color:#1a1a1a;line-height:1.6;padding:24px}
+.w{max-width:1000px;margin:0 auto}
+.hdr{background:#fff;border:1px solid #e5e2dc;border-radius:10px;padding:16px 22px;cursor:pointer;user-select:none;box-shadow:0 2px 8px rgba(0,0,0,.05);display:flex;align-items:center;justify-content:space-between;transition:box-shadow .15s}
+.hdr:hover{box-shadow:0 4px 16px rgba(0,0,0,.08)}
+.hdr h1{font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px}
+.hdr .r{display:flex;align-items:center;gap:16px;font-size:13px;color:#7a756e}
+.hdr .n{font-size:22px;font-weight:700;color:#2c6e3f}
+.hdr .a{font-size:18px;transition:transform .2s;display:inline-block}
+.hdr.on .a{transform:rotate(180deg)}
+.ct{display:none;margin-top:16px}.ct.on{display:block}
+.sts{display:flex;gap:12px;margin:14px 0;flex-wrap:wrap}
+.st{background:#fff;border:1px solid #e5e2dc;border-radius:8px;padding:12px 18px;min-width:110px;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.st .sv{font-size:22px;font-weight:700}.st .sl{font-size:10px;color:#7a756e;font-weight:600;text-transform:uppercase;letter-spacing:.4px}
+.cd{background:#fff;border:1px solid #e5e2dc;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.05);margin-bottom:14px;overflow:hidden}
+.ch{padding:12px 20px;border-bottom:1px solid #e5e2dc;font-weight:600;font-size:14px}
+table{width:100%;border-collapse:collapse}
+thead th{text-align:left;padding:9px 16px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.3px;color:#7a756e;background:#faf9f7;border-bottom:1px solid #e5e2dc}
+tbody tr{border-bottom:1px solid #e5e2dc;transition:background .08s}tbody tr:last-child{border-bottom:none}tbody tr:hover{background:#faf9f7}
+tbody td{padding:9px 16px;font-size:13px}
+.bg{display:inline-flex;align-items:center;gap:5px;font-weight:500}.dt{width:7px;height:7px;border-radius:50%;display:inline-block}
+.cn{font-weight:700;padding:3px 13px;border-radius:14px;cursor:pointer;border:none;font-size:13px;font-family:inherit;transition:all .12s}
+.cn:hover{filter:brightness(.85);color:#fff!important}
+.pc{font-size:12px;color:#7a756e}
+.bw{display:flex;align-items:center;gap:6px}.br{height:5px;border-radius:3px;opacity:.7}
+.dl{display:none;border-top:1px solid #e5e2dc;background:#faf9f7}.dl.on{display:block}
+.dl table{font-size:12px}.dl thead th{font-size:10px;padding:7px 14px}.dl tbody td{padding:7px 14px;font-size:12px}
+.tr{cursor:pointer}.tr:hover{background:#f0efeb!important}
+.td{display:none;padding:10px 14px;background:#f0efeb;font-size:12px;color:#444;line-height:1.7;white-space:pre-wrap;border-top:1px dashed #ddd}.td.on{display:block}
+.sh{border-left:3px solid #c0392b}.sm{border-left:3px solid #d4740e}
+.ft{text-align:center;padding:20px;font-size:11px;color:#bbb;margin-top:8px}
+</style></head><body><div class="w"><div class="hdr on" onclick="this.classList.toggle('on');document.getElementById('ct').classList.toggle('on')">
+<h1>📊 CS 문의 분류 — 2026.03.23~03.29</h1>
+<div class="r"><span class="n">104건</span><span>긴급 29</span><span class="a">▼</span></div>
+</div><div class="ct on" id="ct"><div class="sts">
+<div class="st"><div class="sv" style="color:#2c6e3f">104</div><div class="sl">전체</div></div>
+<div class="st"><div class="sv" style="color:#c0392b">29</div><div class="sl">긴급</div></div>
+<div class="st"><div class="sv" style="color:#2c6e3f">9</div><div class="sl">카테고리</div></div>
+</div><div class="cd"><div class="ch">📋 카테고리별 건수</div><table>
+<thead><tr><th>카테고리</th><th>건수</th><th>비율</th><th>분포</th></tr></thead><tbody><tr>
+<td><span class="bg"><span class="dt" style="background:#c0392b"></span>💳 결제/구매</span></td>
+<td><button class="cn" style="background:#fdf2f0;color:#c0392b" onclick="document.getElementById('d0').classList.toggle('on')">24건</button></td>
+<td class="pc">23.1%</td>
+<td><div class="bw"><div class="br" style="width:100%;background:#c0392b"></div></div></td>
+</tr>
+<tr><td colspan="4" style="padding:0"><div class="dl" id="d0"><table>
+<thead><tr><th>번호</th><th>날짜</th><th>원래 분류</th><th>요약</th></tr></thead><tbody><tr class="tr sh" onclick="document.getElementById('t1380').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1380</strong></td><td>2026-03-23</td><td>상점(클로버, 체리, 다이아, 모험 에너지)</td><td>발생 중인 문제: 구매한 아이템이 반영되지 않음</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1380">발생 중인 문제: 구매한 아이템이 반영되지 않음
+반영되지 않은 아이템: 일부
+구매 장소: 앱 내(Android)
+구매 시각: 3월 23일 1시경
+구매한 아이템 이름/금액/수량: 3,000엔 다이아
+반영되지 않은 아이템 이름과 수량: 3,000엔어치 다이아
+Google Play 주문번호: GPA3328-8547-0081-02336
+구매 정보:
+이번 구매 횟수: 1회
+영수증 날짜 / 주문일: 0323</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1381').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1381</strong></td><td>2026-03-23</td><td>상점</td><td>다이아를 구매하려고 더블클릭해도 오류가 납니다. 이전에는 문제없이 구매할 수 있었습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1381">발생 중인 문제: 유료 아이템을 구매할 수 없음
+문제 상세: 기타
+구매일시 / 발생일시: 3월 20일경부터
+오류 내용: 다이아를 구매하려고 더블클릭해도 오류가 발생합니다.
+상세: 다이아를 구매하려고 더블클릭해도 오류가 납니다. 이전에는 문제없이 구매할 수 있었습니다.</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1399').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1399</strong></td><td>2026-03-24</td><td>상점</td><td>발생 중인 문제: 구매한 아이템이 반영되지 않음</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1399">발생 중인 문제: 구매한 아이템이 반영되지 않음
+반영되지 않은 아이템: 일부
+구매 장소: LINE STORE
+구매 시각: 3월 24일 5시 47분
+구매한 아이템 이름/금액/수량: 320엔 다이아 20개
+이번 구매 횟수: 다이아 20개 1회
+반영되지 않은 아이템 이름과 수량: 다이아 20개
+결제 방법: PayPay</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1411').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1411</strong></td><td>2026-03-24</td><td>상점</td><td>발생 중인 문제: 구매한 아이템이 반영되지 않음</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1411">발생 중인 문제: 구매한 아이템이 반영되지 않음
+반영되지 않은 아이템: 전부
+구매 장소: 앱 내(Android)
+구매일 포함 4일 경과 여부: 예
+구매 시각: 3월 20일 오전 6시 10분
+구매한 아이템 이름/금액/수량: 클로버 부족 패키지 4
+반영되지 않은 아이템 이름과 수량: 이 패키지 전체
+Google Play 주문번호: GPA.3368-8011-6537-63895
+구매 정보:
+이번 구매 횟수: 1회
+영수증 날짜 / 주문일: 3월 20일</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1414').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1414</strong></td><td>2026-03-25</td><td>상점</td><td>발생 중인 문제: 중복 구매됨</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1414">발생 중인 문제: 중복 구매됨
+구매 장소: 앱 내(iPhone/iPad)
+희망 대응: 중복 구매된 아이템 환불
+구매 시각: 3월 25일 8시
+구매한 아이템 이름/금액/수량: 320엔 다이아
+이번 구매 횟수: 1회
+서류번호(명세서 번호): 12345678
+구매 정보:
+반영되지 않은 아이템 이름과 수량: ※다이아 ○개 등
+주문번호: ※M 또는 W로 시작하는 10~12자리 영숫자
+영수증 날짜 / 주문일: (미기재)</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1420').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1420</strong></td><td>2026-03-25</td><td>상점</td><td>발생 중인 문제: 구매한 아이템이 반영되지 않음</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1420">발생 중인 문제: 구매한 아이템이 반영되지 않음
+반영되지 않은 아이템: 전부
+구매 장소: 앱 내(Android)
+구매일 포함 4일 경과 여부: 아니요</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1421').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1421</strong></td><td>2026-03-25</td><td>기타</td><td>부정 청구가 있었습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1421">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 부정 청구가 있었습니다.</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1423').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1423</strong></td><td>2026-03-25</td><td>상점</td><td>발생 중인 문제: 중복 구매됨</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1423">발생 중인 문제: 중복 구매됨
+구매 장소: 앱 내(iPhone/iPad)
+희망 대응: 중복 구매된 아이템 환불
+구매 시각: 3월 1일, 16일, 25일
+구매한 아이템 이름/금액/수량: 매번 다이아 20개 320엔을 샀는데, 1분쯤 후 휴대폰 화면에 “카드 사용이 있었습니다. 640엔”이라고 뜹니다.
+같은 날 다이아를 2번 산 적은 없는데 640엔이 청구됩니다.
+이번 구매 횟수: 다이아 20개 3회
+서류번호(명세서 번호): 0028389549
+구매 정보:
+반영되지 않은 아이템 이름과 수량: 미기재
+주문번호: 미기재
+영수증 날짜 / 주문일: 미기재</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1429').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1429</strong></td><td>2026-03-26</td><td>일반 아이템 구매 및 사용</td><td>3월 21일에 과금한 아이템이 반영되지 않습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1429">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 3월 21일에 과금한 아이템이 반영되지 않습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1430').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1430</strong></td><td>2026-03-26</td><td>상점</td><td>발생 중인 문제: 기억에 없는 결제</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1430">발생 중인 문제: 기억에 없는 결제
+구매 장소: 앱 내(Android)</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1432').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1432</strong></td><td>2026-03-26</td><td>상점</td><td>발생 중인 문제: 구매한 아이템이 반영되지 않음</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1432">발생 중인 문제: 구매한 아이템이 반영되지 않음
+반영되지 않은 아이템: 전부
+구매 장소: 앱 내(Android)
+구매일 포함 4일 경과 여부: 예
+구매 시각: 3월 22일 14시경
+구매한 아이템 이름/금액/수량: 10,800엔어치 다이아
+반영되지 않은 아이템 이름과 수량: 10,800엔어치 다이아
+Google Play 주문번호: GPA3317-3879-766877404
+구매 정보:
+이번 구매 횟수: 2회
+영수증 날짜 / 주문일: 3월 22일</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1440').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1440</strong></td><td>2026-03-27</td><td>상점</td><td>발생 중인 문제: 구매한 아이템이 반영되지 않음</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1440">발생 중인 문제: 구매한 아이템이 반영되지 않음
+반영되지 않은 아이템: 일부
+구매 장소: 앱 내(Android)
+구매 시각: 3월 27일 7시
+구매한 아이템 이름/금액/수량: 스폿 다이아 105 / 1200엔
+반영되지 않은 아이템 이름과 수량: 다이아 105
+Google Play 주문번호: GPA.3353-2709-4024-49496
+구매 정보:
+이번 구매 횟수: 1
+영수증 날짜 / 주문일: 2026.3.27</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1441').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1441</strong></td><td>2026-03-27</td><td>상점</td><td>발생 중인 문제: 구매한 아이템이 반영되지 않음</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1441">발생 중인 문제: 구매한 아이템이 반영되지 않음
+반영되지 않은 아이템: 일부
+구매 장소: 앱 내(Android)
+구매 시각: 3월 27일
+구매한 아이템 이름/금액/수량: 클로버 부족 패키지
+반영되지 않은 아이템 이름과 수량:
+클로버
+다이아
+Google Play 주문번호: GPA.3391.8699.4953.59525
+구매 정보:
+이번 구매 횟수: 1
+영수증 날짜 / 주문일: 2026.3.27</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1442').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1442</strong></td><td>2026-03-27</td><td>상점</td><td>화면을 남기지 않고 종료해 버려서 아무 기록도 없습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1442">문제 발생 일시: 3월 27일 오전 8시 20분경
+문제 발생 장면: 스테이지 3664에서, 한 개만 더 하면 클리어할 수 있어서 다이아를 구매했는데 오류가 나고 화면이 바뀌지 않았습니다.
+다이아 구매는 되어 있었지만 게임은 일단 종료할 수밖에 없었고, 결국 클리어할 수 없게 되었습니다.
+에러 메시지: 영어로 몇 줄의 오류 메시지가 표시되었지만 그대로 잠시 기다렸습니다.
+화면은 아무것도 바뀌지 않았고, 어쩔 수 없이 게임을 종료했습니다.
+상세: 화면을 남기지 않고 종료해 버려서 아무 기록도 없습니다.</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1443').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1443</strong></td><td>2026-03-27</td><td>상점</td><td>발생 중인 문제: 구매한 아이템이 반영되지 않음</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1443">발생 중인 문제: 구매한 아이템이 반영되지 않음
+반영되지 않은 아이템: 전부
+구매 장소: 앱 내(Android)
+구매일 포함 4일 경과 여부: 아니요</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1456').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1456</strong></td><td>2026-03-28</td><td>상점</td><td>발생 중인 문제: 구매한 아이템이 반영되지 않음</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1456">발생 중인 문제: 구매한 아이템이 반영되지 않음
+반영되지 않은 아이템: 전부
+구매 장소: 앱 내(Android)
+구매일 포함 4일 경과 여부: 예
+구매 시각: 3월 23일 19:15
+구매한 아이템 이름/금액/수량: 800엔어치 다이아
+반영되지 않은 아이템 이름과 수량: 다이아 55개
+Google Play 주문번호: GPA.3360-6461-2528-67384
+구매 정보:
+이번 구매 횟수: 1회
+영수증 날짜 / 주문일: 3월 23일
+추가 상세: 3월 15일에 반영되지 않았던 분은 취소되어 환불받았기 때문에 다시 구매했는데, 또 반영되지 않았습니다.</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1459').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1459</strong></td><td>2026-03-28</td><td>상점</td><td>발생 중인 문제: 구매한 아이템이 반영되지 않음</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1459">발생 중인 문제: 구매한 아이템이 반영되지 않음
+반영되지 않은 아이템: 일부
+구매 장소: 앱 내(iPhone/iPad)
+구매 시각: 3월 28일 12시 반경
+구매한 아이템 이름/금액/수량:
+100엔으로
+클로버 5
+클로버 30분 1
+다이아 10 패키지
+이번 구매 횟수: 1회
+서류번호(명세서 번호): 카드 Apple 결제라 명세서가 나오지 않았습니다
+구매 정보:
+반영되지 않은 아이템 이름과 수량: 다이아 10개만 늘었고 클로버는 1개도 없습니다.
+주문번호: 미기재
+영수증 날짜 / 주문일: 미기재</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1463').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1463</strong></td><td>2026-03-28</td><td>상점</td><td>발생 중인 문제: 구매한 아이템이 반영되지 않음</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1463">발생 중인 문제: 구매한 아이템이 반영되지 않음
+반영되지 않은 아이템: 전부
+구매 장소: 앱 내(Android)
+구매일 포함 4일 경과 여부: 아니요</div></td></tr><tr class="tr " onclick="document.getElementById('t1464').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1464</strong></td><td>2026-03-28</td><td>상점</td><td>LINE 포코포코에서 나이 설정을 잘못 등록해서, 과금 상한이 15세 이하(5,000엔)가 되어 있습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1464">발생 중인 문제: 기타
+구매일시 / 발생일시: 20260301
+상세: LINE 포코포코에서 나이 설정을 잘못 등록해서, 과금 상한이 15세 이하(5,000엔)가 되어 있습니다.
+성인이므로 과금 제한 해제 또는 나이 정보 수정을 부탁드립니다.</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1466').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1466</strong></td><td>2026-03-28</td><td>상점</td><td>발생 중인 문제: 구매한 아이템이 반영되지 않음</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1466">발생 중인 문제: 구매한 아이템이 반영되지 않음
+반영되지 않은 아이템: 전부
+구매 장소: 앱 내(Android)
+구매일 포함 4일 경과 여부: 예
+구매 시각: 03월 19일 시간 불명
+구매한 아이템 이름/금액/수량: 다이아 상점 100엔
+반영되지 않은 아이템 이름과 수량: 다이아 상점 100엔
+Google Play 주문번호: GPA.3335-5905-99723
+구매 정보:
+이번 구매 횟수: 1
+영수증 날짜 / 주문일: 3월 19일</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1472').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1472</strong></td><td>2026-03-29</td><td>상점</td><td>발생 중인 문제: 구매한 아이템이 반영되지 않음</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1472">발생 중인 문제: 구매한 아이템이 반영되지 않음
+반영되지 않은 아이템: 전부
+구매 장소: 앱 내(Android)
+구매일 포함 4일 경과 여부: 예
+구매 시각: 3월 25일 10시 42분
+구매한 아이템 이름/금액/수량: 800엔 다이아 55개
+반영되지 않은 아이템 이름과 수량: 다이아 55개
+Google Play 주문번호: GPA 3399-3396-8573-10605
+구매 정보:
+이번 구매 횟수: 미기재
+영수증 날짜 / 주문일: 3월 25일 10시 42분</div></td></tr><tr class="tr " onclick="document.getElementById('t1474').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1474</strong></td><td>2026-03-29</td><td>상점</td><td>iPhone으로 다이아 320엔을 구매했는데 640엔이 청구되었습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1474">발생 중인 문제: 기타
+구매일시 / 발생일시: 3월 29일 10시 54분
+상세: iPhone으로 다이아 320엔을 구매했는데 640엔이 청구되었습니다.
+카드는 PayPay 크레딧입니다. 왜인가요?</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1477').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1477</strong></td><td>2026-03-29</td><td>상점</td><td>발생 중인 문제: 구매한 아이템이 반영되지 않음</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1477">발생 중인 문제: 구매한 아이템이 반영되지 않음
+반영되지 않은 아이템: 일부
+구매 장소: 앱 내(iPhone/iPad)
+구매 시각: 3월 25일
+구매한 아이템 이름/금액/수량: 다이아 100개 이상 구매.
+사용하지 않았는데 중간에 다이아가 약 70개 정도 줄어 있습니다.
+이번 구매 횟수: 1회
+서류번호(명세서 번호): 816110432391
+구매 정보:
+반영되지 않은 아이템 이름과 수량: 다이아가 중간에 70개 정도 사라졌습니다!!!
+왜죠??? 갑자기 사라졌어요!!!
+알아차리고 깜짝 놀랐습니다!!! 왜죠???
+돈 주고 구매한 건데!!!
+말도 안 됩니다!!! 다이아 돌려주세요!!!
+주문번호: MXG552573X
+영수증 날짜 / 주문일: 3월 25일</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1481').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1481</strong></td><td>2026-03-29</td><td>상점</td><td>발생 중인 문제: 구매한 아이템이 반영되지 않음</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1481">발생 중인 문제: 구매한 아이템이 반영되지 않음
+반영되지 않은 아이템: 전부
+구매 장소: 앱 내(Android)
+구매일 포함 4일 경과 여부: 예
+구매 시각: 2026년 3월 23일 14시
+구매한 아이템 이름/금액/수량: 1,900엔 / 다이아 145개
+반영되지 않은 아이템 이름과 수량: 다이아 145개
+Google Play 주문번호: GPA.3342-8581-0687-57837
+구매 정보:
+이번 구매 횟수: 1회
+영수증 날짜 / 주문일: 2026/03/23 14:21:11</div></td></tr></tbody></table></div></td></tr><tr>
+<td><span class="bg"><span class="dt" style="background:#8e44ad"></span>🐛 버그</span></td>
+<td><button class="cn" style="background:#f5edf9;color:#8e44ad" onclick="document.getElementById('d1').classList.toggle('on')">22건</button></td>
+<td class="pc">21.2%</td>
+<td><div class="bw"><div class="br" style="width:92%;background:#8e44ad"></div></div></td>
+</tr>
+<tr><td colspan="4" style="padding:0"><div class="dl" id="d1"><table>
+<thead><tr><th>번호</th><th>날짜</th><th>원래 분류</th><th>요약</th></tr></thead><tbody><tr class="tr " onclick="document.getElementById('t1383').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1383</strong></td><td>2026-03-23</td><td>친구 초대</td><td>친구 초대가 3월 20일까지라고 되어 있었는데, 카운트가 0으로 돌아가지 않은 채</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1383">문제 발생 일시: 3월 20일 이후
+문제 발생 장면: 친구 초대
+에러 메시지: 친구 초대 보상 카운트가 0으로 돌아가지 않음
+상세: 친구 초대가 3월 20일까지라고 되어 있었는데, 카운트가 0으로 돌아가지 않은 채
+4월 30일까지로 바뀌어 있습니다.
+친구를 초대해도 카운트되지 않아서 아이템을 받을 수 없습니다.
+계속 이 상태인 건가요?
+몇 년째 포코포코를 하고 있지만, 친구 초대로 아이템을 얻는 것이 유일한 아이템 획득처였기 때문에 너무 안타깝습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1393').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1393</strong></td><td>2026-03-23</td><td>일반 스테이지</td><td>열리긴 했지만 전혀 움직이지 않았습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1393">문제 발생 일시: 3월 23일 23시 22분
+문제 발생 장면: 스테이지 3476
+에러 메시지: 없음
+상세: 열리긴 했지만 전혀 움직이지 않았습니다.
+재시작해야 했고, 클로버 1개를 낭비했습니다.</div></td></tr><tr class="tr sm" onclick="document.getElementById('t1394').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1394</strong></td><td>2026-03-23</td><td>실행 불가</td><td>정확히 12시간이 지나서 클로버를 받으려고 했는데 전혀 연결되지 않았습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1394">문제 발생 일시: 3월 23일 22:40~23:50
+문제 발생 장면: 네트워크 오류로 1시간 이상 연결되지 않음
+에러 메시지: 네트워크 오류가 발생했습니다
+상세: 정확히 12시간이 지나서 클로버를 받으려고 했는데 전혀 연결되지 않았습니다.
+몇 번이나 재시작해도 상황은 바뀌지 않았습니다.
+업데이트할 때마다 더 심해지고 있습니다.</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1395').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1395</strong></td><td>2026-03-24</td><td>상점</td><td>연장에 다이아를 사용한 순간 ‘오류입니다’라는 메시지가 떠서 처음부터 다시 하게 되었고, 다이아만 손해 봤습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1395">문제 발생 일시: 3월 23일 23시 52분
+문제 발생 장면: 연장에 다이아를 사용한 순간 오류가 나서, 다이아는 소비됐는데 처음부터 다시 하게 되었습니다.
+이전에도 같은 현상이 있어 문의했지만, 답변도 보상도 없었습니다.
+기기는 새것으로 바꿨고 Wi‑Fi도 연결된 상태였습니다. 제 쪽 과실은 없다고 생각합니다.
+이번에는 반드시 답변해 주는 건가요!?
+의도적으로 오류를 일으키는 프로그래밍을 한 게 아닌가 의심될 정도로 정기적으로 불량이 발생합니다.
+납득할 만한 답변을 원합니다.
+일반 스테이지, 제 최신 스테이지에서 발생했습니다.
+에러 메시지: “오류가 어쩌고” 하는 메시지
+상세: 연장에 다이아를 사용한 순간 ‘오류입니다’라는 메시지가 떠서 처음부터 다시 하게 되었고, 다이아만 손해 봤습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1396').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1396</strong></td><td>2026-03-24</td><td>메시지 박스</td><td>클로버 30분과 사과 30분을 동시에 사용하려고 했는데, 사과 30분이 적용되지 않고 사라졌습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1396">문제 발생 일시: 0324 00:03
+문제 발생 장면: 클로버 30분과 사과 30분을 동시에 사용하려고 했더니 사과 30분이 적용되지 않고 사라졌습니다.
+에러 메시지: 없음
+상세: 클로버 30분과 사과 30분을 동시에 사용하려고 했는데, 사과 30분이 적용되지 않고 사라졌습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1397').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1397</strong></td><td>2026-03-24</td><td>메시지 박스</td><td>동일</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1397">문제 발생 일시: 3월 24일 오전 1:55경
+문제 발생 장면: 모험 모드를 플레이하던 중 화면이 꺼지며 오프닝 화면으로 돌아갔습니다.
+아이템과 체리도 사용하고 있었으니 돌려받고 싶습니다.
+에러 메시지: 없음
+상세: 동일</div></td></tr><tr class="tr " onclick="document.getElementById('t1398').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1398</strong></td><td>2026-03-24</td><td>이벤트 스테이지</td><td>화면을 터치하면 오른쪽 아래 사과가 깜빡거리면서 약간 위치가 어긋나 있었습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1398">문제 발생 일시: 3월 24일 0시 47분
+문제 발생 장면: 포코TV? 이벤트 스테이지
+에러 메시지: 없음
+상세: 화면을 터치하면 오른쪽 아래 사과가 깜빡거리면서 약간 위치가 어긋나 있었습니다.
+특별히 불편한 점은 없었지만, 일단 발견해서 참고로 보고드립니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1402').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1402</strong></td><td>2026-03-24</td><td>일반 스테이지</td><td>연결이 끊기고 클로버만 3개 사라졌습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1402">문제 발생 일시: 10시 전에 갑자기 연결이 끊기고 클로버만 3개 사라졌습니다. Wi‑Fi도 연결되어 있고 업데이트도 되어 있습니다.
+문제 발생 장면: 스테이지
+에러 메시지: 없음
+상세: 연결이 끊기고 클로버만 3개 사라졌습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1403').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1403</strong></td><td>2026-03-24</td><td>일반 스테이지</td><td>갑자기 연결이 끊기고 클로버만 3개 사라졌습니다. Wi‑Fi도 OK, 업데이트도 OK였습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1403">문제 발생 일시: 3월 24일 10시 전
+문제 발생 장면: 스테이지
+에러 메시지: 없음
+상세: 갑자기 연결이 끊기고 클로버만 3개 사라졌습니다. Wi‑Fi도 OK, 업데이트도 OK였습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1406').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1406</strong></td><td>2026-03-24</td><td>메시지 박스</td><td>최근 포코포코에서 자주 있는 일인데, 제가 지시해서 움직인 곳이 아닌 곳이 움직여서 원하는 결과가 나오지 않거나,</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1406">문제 발생 일시: 2026년 11:25경
+문제 발생 장면: 게임 중 언제든지
+에러 메시지: 없음
+상세: 최근 포코포코에서 자주 있는 일인데, 제가 지시해서 움직인 곳이 아닌 곳이 움직여서 원하는 결과가 나오지 않거나,
+같은 그림 4개나 5개가 모여도 아이템으로 바뀌지 않는 등의 현상이 예전보다 자주 일어납니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1408').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1408</strong></td><td>2026-03-24</td><td>메시지 박스</td><td>동료 3명 중 1명이 리스트에서 사라졌고, 앱을 삭제 후 다시 설치해도 리스트에 없습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1408">문제 발생 일시: 3월 24일 6시경
+문제 발생 장면: 모험
+에러 메시지: 없음
+상세: 동료 3명 중 1명이 리스트에서 사라졌고, 앱을 삭제 후 다시 설치해도 리스트에 없습니다.</div></td></tr><tr class="tr sm" onclick="document.getElementById('t1410').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1410</strong></td><td>2026-03-24</td><td>일반 스테이지</td><td>클리어했는데 이런 오류는 곤란합니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1410">문제 발생 일시: 3/24 18시 43분경
+문제 발생 장면: 스테이지 1086을 클리어했지만 통신 오류로 클리어가 없던 일이 되었습니다.
+에러 메시지: 통신 오류
+상세: 클리어했는데 이런 오류는 곤란합니다.
+회피 방법은 없나요? 클리어 처리로 바꿔줄 수 없나요?</div></td></tr><tr class="tr sm" onclick="document.getElementById('t1415').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1415</strong></td><td>2026-03-25</td><td>起きてオビス(원문 그대로)</td><td>쑥쑥의 약 1개</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1415">문제 발생 일시: 2026년 3월 25일 12시 10분경
+문제 발생 장면: 포코리그 상품으로 받은 ‘쑥쑥의 약’을 이미 3번 강화한 ‘해저귀암성 도라에몽’에 사용했더니,
+한 번 기존 강화가 사라지고 체력도 초기화된 대신 별 6 상태가 되었습니다.
+그런데 그 후 오류가 발생해 앱이 종료되었습니다.
+다시 시작하니 도라에몽은 원래의 3번 강화된 별 5 상태로 돌아와 있었고, 쑥쑥의 약은 사라졌습니다.
+아이템 복구나 보상을 부탁드립니다.
+어렵다면 무언가 조치가 없으면 플레이어 입장에서는 희귀 아이템이라 이런 오류가 나면 정말 곤란합니다.
+검토 부탁드립니다.
+에러 메시지: 있음
+상세: 쑥쑥의 약 1개</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1434').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1434</strong></td><td>2026-03-26</td><td>상점</td><td>다이아를 사용해 연장한 순간 오류가 나서 다시 로그인하라고 뜨더니, 다시 시작 상태가 되었습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1434">문제 발생 일시: 2020/3/23
+문제 발생 장면: 일반 스테이지에서 다이아를 써서 연장했더니 갑자기 다시 하라고 나왔다
+에러 메시지: 다시 하세요
+상세: 다이아를 사용해 연장한 순간 오류가 나서 다시 로그인하라고 뜨더니, 다시 시작 상태가 되었습니다.
+다이아만 확실히 소비되었습니다.
+올해 들어 2번째인데, 오류는 어쩔 수 없다 쳐도 그로 인해 발생한 다이아 소비 등의 보상은 해야 하는 거 아닙니까?
+운영은 사기 집단인가요?
+제대로 사람이 오류 신고를 읽지 않는다고밖에 생각되지 않는 대응이네요.
+템플릿 답변만 보내고 대응은 없나요!?
+형편없네요. 일본인 스태프는 없나요? 일본어를 못 읽는다면 읽고 이해할 수 있는 스태프를 두세요.
+배짱 장사입니까? 빨리 다이아 돌려주세요, 바보들아.</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1438').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1438</strong></td><td>2026-03-26</td><td>상점</td><td>야채 스테이지 도중, 방금 LINE으로 오류 신고를 했는데도 괴롭히는 건가요?</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1438">문제 발생 일시: 2026/3/26 21시 12분경
+문제 발생 장면: 야채 스테이지
+에러 메시지: 다시 하세요
+상세: 야채 스테이지 도중, 방금 LINE으로 오류 신고를 했는데도 괴롭히는 건가요?
+불만을 말한 유저에 대한 보복인가요?
+장난하지 마세요.
+빨리 대응하고 다이아 돌려주세요!</div></td></tr><tr class="tr " onclick="document.getElementById('t1439').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1439</strong></td><td>2026-03-27</td><td>로그인 보너스</td><td>매일 로그인해서 로그인 보너스를 받아왔는데, 며칠 전부터는 화면조차 나오지 않습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1439">문제 발생 일시: 3월 23일 오전 0시쯤
+문제 발생 장면: 로그인 보너스가 갑자기 표시되지 않게 되었습니다.
+매일 로그인하고 있는데 로그인 보너스 화면이 나오지 않습니다.
+에러 메시지: 없음
+상세: 매일 로그인해서 로그인 보너스를 받아왔는데, 며칠 전부터는 화면조차 나오지 않습니다.</div></td></tr><tr class="tr sm" onclick="document.getElementById('t1445').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1445</strong></td><td>2026-03-27</td><td>메시지 박스</td><td>위 내용 그대로, 야채 스테이지를 탭한 뒤 통신 오류 같은 것으로 앱이 닫혔고, 다시 앱을 켜보니 야채 스테이지가 이미 끝난 상태(사진처럼 [스</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1445">문제 발생 일시: 3월 27일 9시 48분경
+문제 발생 장면: 포코포코 한정 야채 스테이지 아이콘
+에러 메시지: 야채 스테이지를 탭했더니 오류 메시지가 나오고 앱이 닫혀 버렸습니다.
+상세: 위 내용 그대로, 야채 스테이지를 탭한 뒤 통신 오류 같은 것으로 앱이 닫혔고, 다시 앱을 켜보니 야채 스테이지가 이미 끝난 상태(사진처럼 [스타트]가 회색이 되어 있었음)가 되어 있었습니다.
+일반 스테이지에서도 자주 오류 → 앱 종료 → 스테이지를 한 번 플레이한 상태가 되는 일이 있으니, 오류 점검 부탁드립니다!</div></td></tr><tr class="tr " onclick="document.getElementById('t1450').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1450</strong></td><td>2026-03-27</td><td>일반 아이템 구매 및 사용</td><td>첨부한 이미지 오른쪽 아래에 폭탄이 있는 게 보이시나요?</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1450">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 첨부한 이미지 오른쪽 아래에 폭탄이 있는 게 보이시나요?
+이건 스테이지 시작 시 아이템을 사용해서 놓인 폭탄입니다.
+그런데 막상 스테이지를 시작해보면, 그곳까지 도달하기도 전에 사과가 거의 다 없어집니다. 이해하시나요?
+폭탄이 전혀 움직이지 않습니다. 게임에 전혀 도움이 안 됩니다.
+아이템을 완전히 손해 봤습니다.
+이런 곳에 배치되지 않도록 고려해 주실 수 없나요?
+매우 불쾌합니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1451').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1451</strong></td><td>2026-03-27</td><td>메시지 박스</td><td>로그인으로 받을 수 있는 15분 스코어 10% UP이 안내만 뜨고 사라졌고,</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1451">문제 발생 일시: 3월 27일 22:30
+문제 발생 장면: 3/27(금) 19시 이후 첫 로그인 시
+에러 메시지: 없음
+상세: 로그인으로 받을 수 있는 15분 스코어 10% UP이 안내만 뜨고 사라졌고,
+동료 소집을 해서 도라에몽이 나왔는데 3번째가 되어야 할 것이 [NEW]로 표시되면서 1체로 돌아가 버렸습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1455').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1455</strong></td><td>2026-03-28</td><td>부스터 이벤트</td><td>부스터 이벤트가 적용되지 않습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1455">문제 발생 일시: 3월 27일 11시
+문제 발생 장면: 부스터 이벤트가 적용되지 않음
+에러 메시지: 없음
+상세: 부스터 이벤트가 적용되지 않습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1468').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1468</strong></td><td>2026-03-28</td><td>메시지 박스</td><td>FP를 받기 위해 광고를 봤는데, 광고가 종료되지 않고 멈춰서 앱을 강제 종료했습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1468">문제 발생 일시: 3/28 20시 전후
+문제 발생 장면: FP를 받기 위해 광고를 보는 장면
+에러 메시지: 없음
+상세: FP를 받기 위해 광고를 봤는데, 광고가 종료되지 않고 멈춰서 앱을 강제 종료했습니다.
+다시 켜서 다시 FP를 받기 위해 광고를 봤지만 같은 현상이 일어났습니다.
+참고로 마우스피스 교정 광고입니다.</div></td></tr><tr class="tr sm" onclick="document.getElementById('t1469').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1469</strong></td><td>2026-03-28</td><td>메시지 박스</td><td>여러 번 문의드려 죄송합니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1469">문제 발생 일시: 3월 28일 21시 48분
+문제 발생 장면: 이전 문의: 포코리그 우승 상품인 쑥쑥의 약을 사용했으나 오류로 반영되지 않음.
+→ 문의 후 대상 캐릭터 티켓을 받아 사용했으나 또 오류 발생.
+에러 메시지: 없음
+상세: 여러 번 문의드려 죄송합니다.
+이전에 보냈던 쑥쑥의 약 오류 관련입니다.
+그 건에 대해 해저귀암성 도라에몽 티켓 1장을 주셔서 감사합니다.
+오늘 아침 9시 47분에 사용해 도라에몽×4로 체력이 1173에서 1251로 올랐습니다.
+그런데 조금 전 21시 48분에 앱을 열어보니 다시 ×3 도라에몽으로 돌아가 있었습니다.
+파티에는 편성되어 있는데 캐릭터 목록에는 다른 도라에몽이 존재합니다.
+몇 번 앱을 껐다 켜고 휴대폰 자체 전원도 껐다가 다시 로그인했지만 상황은 바뀌지 않았습니다.
+오류가 전혀 수정되지 않았습니다. 대응 부탁드립니다.</div></td></tr></tbody></table></div></td></tr><tr>
+<td><span class="bg"><span class="dt" style="background:#2563a8"></span>🎮 스테이지/레벨</span></td>
+<td><button class="cn" style="background:#edf3fb;color:#2563a8" onclick="document.getElementById('d2').classList.toggle('on')">17건</button></td>
+<td class="pc">16.3%</td>
+<td><div class="bw"><div class="br" style="width:71%;background:#2563a8"></div></div></td>
+</tr>
+<tr><td colspan="4" style="padding:0"><div class="dl" id="d2"><table>
+<thead><tr><th>번호</th><th>날짜</th><th>원래 분류</th><th>요약</th></tr></thead><tbody><tr class="tr sh" onclick="document.getElementById('t1384').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1384</strong></td><td>2026-03-23</td><td>상점</td><td>이전에도 다이아가 사라진다고 신고했는데 또 같은 일이 생겼습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1384">문제 발생 일시: 3월 21일경
+문제 발생 장면: 포코포코 일반 스테이지
+에러 메시지: 없음
+상세: 이전에도 다이아가 사라진다고 신고했는데 또 같은 일이 생겼습니다.
+원인이 무엇인지 알고 싶습니다.
+제 쪽 문제인가요?</div></td></tr><tr class="tr " onclick="document.getElementById('t1387').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1387</strong></td><td>2026-03-23</td><td>기타</td><td>배열이 쓰레기야!! 완전 쓰레기 게임이네</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1387">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 배열이 쓰레기야!! 완전 쓰레기 게임이네</div></td></tr><tr class="tr sm" onclick="document.getElementById('t1389').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1389</strong></td><td>2026-03-23</td><td>상점</td><td>리워드 다이아 10개가 반영되지 않아 받지 못했습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1389">문제 발생 일시: 3월 23일 18시경
+문제 발생 장면: 스테이지 257
+에러 메시지: 특별히 없음
+상세: 리워드 다이아 10개가 반영되지 않아 받지 못했습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1390').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1390</strong></td><td>2026-03-23</td><td>일반 스테이지</td><td>도라에몽 이벤트에서 새 스테이지 30개를 클리어하면 도라에몽을 받을 수 있다고 적혀 있는데,</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1390">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 도라에몽 이벤트에서 새 스테이지 30개를 클리어하면 도라에몽을 받을 수 있다고 적혀 있는데,
+아마 30스테이지는 클리어한 것 같은데 아직 못 받았습니다.
+뜻이 다른 건가요?</div></td></tr><tr class="tr " onclick="document.getElementById('t1400').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1400</strong></td><td>2026-03-24</td><td>일반 스테이지</td><td>동일</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1400">문제 발생 일시: 3월 24일 7:45
+문제 발생 장면: 스테이지 클리어 후 다음 에리어를 해제하기 위해 다이아 10개를 사용했지만 해제되지 않았습니다.
+에러 메시지: 없음
+상세: 동일</div></td></tr><tr class="tr sm" onclick="document.getElementById('t1419').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1419</strong></td><td>2026-03-25</td><td>일반 스테이지</td><td>에리어 64를 클리어했는데 보상 클로버 15개를 받지 못했습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1419">문제 발생 일시: 3월 24일 8:30경
+문제 발생 장면: 포코포코 에리어 64 미션
+에러 메시지: 없음
+상세: 에리어 64를 클리어했는데 보상 클로버 15개를 받지 못했습니다.</div></td></tr><tr class="tr sm" onclick="document.getElementById('t1427').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1427</strong></td><td>2026-03-26</td><td>일반 스테이지</td><td>의견이라기보다 질문인데, 연쇄 시에 화살표 같은 아이템이 나올 수 있는 블록 모양이 되어도 아이템이 나오지 않는 것은 연쇄 시에는 무효인 건가요</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1427">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 의견이라기보다 질문인데, 연쇄 시에 화살표 같은 아이템이 나올 수 있는 블록 모양이 되어도 아이템이 나오지 않는 것은 연쇄 시에는 무효인 건가요?
+심하면 일부러 아이템이 나오지 않도록 블록 떨어지는 방식이 이상할 때가 있습니다.
+그리고 게임 도중 오류로 멈춥니다. 그것뿐만 아니라 시작도 안 했는데 클로버가 줄어듭니다.
+이건 과금시키기 위한 건가요?</div></td></tr><tr class="tr " onclick="document.getElementById('t1435').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1435</strong></td><td>2026-03-26</td><td>기타</td><td>발생 중인 문제: 게임 데이터가 초기화됨</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1435">발생 중인 문제: 게임 데이터가 초기화됨
+이전 로그인 방법: LINE 로그인
+문제가 발생한 계기: LINE 계정을 신규 작성/변경/삭제함
+앞으로 플레이할 단말/계정에서 문의한 것인가요?: 예
+문제 발생 일시: 3월 22일(일)
+도달했던 메인 스테이지 수: 스테이지 1800 부근
+자주 사용하던 동료(3개 정도):
+무민맘 레벨 MAX
+오야카타 포코타 레벨 불명
+또 하나는 해적선장 포코타였던 것 같습니다</div></td></tr><tr class="tr " onclick="document.getElementById('t1447').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1447</strong></td><td>2026-03-27</td><td>일반 스테이지</td><td>며칠 전에 트래블 케이스 유료 2종류를 구매하고 전부 클리어한 뒤 일괄 수령을 했습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1447">문제 발생 일시: 3월 27일 12시 20분경
+문제 발생 장면: 트래블 케이스 이벤트 또는 메시지 박스
+에러 메시지: 없음
+상세: 며칠 전에 트래블 케이스 유료 2종류를 구매하고 전부 클리어한 뒤 일괄 수령을 했습니다.
+27일 아침에 메시지에서 클로버 이외의 아이템을 수령했습니다.
+수령 후 일반 스테이지를 플레이했더니 레인보우 폭탄이 늘어나지 않은 것을 알게 되었습니다.
+문의 직전에 iPhone 재시작과 앱 실행을 해도 달라지지 않았습니다.
+업데이트는 최신이어야 합니다.
+유료 구매한 것이니 어떻게든 처리해 주셨으면 합니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1448').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1448</strong></td><td>2026-03-27</td><td>메시지 박스</td><td>없음</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1448">문제 발생 일시: 3/26
+문제 발생 장면: 포코TV에 스테이지가 10까지만 있고 새로운 스테이지가 나오지 않아 좋아요를 획득하지 못하고 정체되어 있습니다.
+에러 메시지: 없음
+상세: 없음</div></td></tr><tr class="tr " onclick="document.getElementById('t1457').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1457</strong></td><td>2026-03-28</td><td>일반 스테이지</td><td>클로버 카운트 시간을 11시간이나 10시간으로 해줬으면 합니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1457">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 클로버 카운트 시간을 11시간이나 10시간으로 해줬으면 합니다.
+조금씩 시간이 밀려서 플레이하기 어렵습니다.
+아니면 시간 설정 방식으로 해주셨으면 합니다.
+잘 부탁드립니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1461').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1461</strong></td><td>2026-03-28</td><td>일반 스테이지</td><td>동일</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1461">문제 발생 일시: 3월 28일 2시경
+문제 발생 장면: 포코포코를 스테이지 50까지 클리어했는데 포인트가 쌓이지 않습니다.
+에러 메시지: 없음
+상세: 동일</div></td></tr><tr class="tr " onclick="document.getElementById('t1470').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1470</strong></td><td>2026-03-29</td><td>일반 스테이지</td><td>흰 꽃이 피고 클리어했는데 다음 스테이지로 가지 않습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1470">문제 발생 일시: 3/27
+문제 발생 장면: 스테이지 1420에서 흰 꽃이 피고 클리어했는데 다음 스테이지로 가지 않습니다.
+에러 메시지: 스테이지를 클리어해도 다음 스테이지로 가지 않음
+상세: 흰 꽃이 피고 클리어했는데 다음 스테이지로 가지 않습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1473').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1473</strong></td><td>2026-03-29</td><td>일반 스테이지</td><td>스테이지 2263을 클리어했는데 꽃이 피지 않고, 다시 하시겠습니까?가 떠서 클리어한 것으로 처리되지 않았습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1473">문제 발생 일시: 3월 29일
+문제 발생 장면: 2263
+에러 메시지: 없음
+상세: 스테이지 2263을 클리어했는데 꽃이 피지 않고, 다시 하시겠습니까?가 떠서 클리어한 것으로 처리되지 않았습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1476').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1476</strong></td><td>2026-03-29</td><td>상점</td><td>이곳을 누르면 스테이지 끝까지 갈 수 있게 해주실 수 없나요?</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1476">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 이곳을 누르면 스테이지 끝까지 갈 수 있게 해주실 수 없나요?
+다이아나 체리를 받으러 가는 게 너무 힘듭니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1478').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1478</strong></td><td>2026-03-29</td><td>상점</td><td>진짜 깨게 할 생각도, 즐기게 할 생각도 있는 건가요?</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1478">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 진짜 깨게 할 생각도, 즐기게 할 생각도 있는 건가요?
+거의 매번 이런 배치인데 어떻게 클리어하라는 거죠?
+맨날 이런 쓰레기 같은 짓만 하지 마세요!
+다이아 도둑들아!</div></td></tr><tr class="tr " onclick="document.getElementById('t1480').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1480</strong></td><td>2026-03-29</td><td>일반 스테이지</td><td>클리어하지 못했을 때 광고를 보고 부활할 수 있어야 하는데,</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1480">문제 발생 일시: 3월 29일 20시
+문제 발생 장면: 스테이지를 클리어하지 못했을 때 광고를 보고 부활하는 장면
+에러 메시지: 없음
+상세: 클리어하지 못했을 때 광고를 보고 부활할 수 있어야 하는데,
+광고를 끝까지 봐도 광고가 끝나지 않고 몇 분을 기다려도 X 표시가 나오지 않았습니다.
+강제로 돌아가도 광고가 다시 처음부터 재생되어, 결국 거의 다 클리어한 스테이지를 포기할 수밖에 없었습니다.
+광고는 ‘로열 킹덤’입니다.</div></td></tr></tbody></table></div></td></tr><tr>
+<td><span class="bg"><span class="dt" style="background:#2874a6"></span>💬 의견/요청</span></td>
+<td><button class="cn" style="background:#edf4fa;color:#2874a6" onclick="document.getElementById('d3').classList.toggle('on')">9건</button></td>
+<td class="pc">8.7%</td>
+<td><div class="bw"><div class="br" style="width:38%;background:#2874a6"></div></div></td>
+</tr>
+<tr><td colspan="4" style="padding:0"><div class="dl" id="d3"><table>
+<thead><tr><th>번호</th><th>날짜</th><th>원래 분류</th><th>요약</th></tr></thead><tbody><tr class="tr " onclick="document.getElementById('t1379').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1379</strong></td><td>2026-03-23</td><td>친구 초대</td><td>강제로 LINE 친구 등록시키지 마세요!!</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1379">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 강제로 LINE 친구 등록시키지 마세요!!</div></td></tr><tr class="tr " onclick="document.getElementById('t1409').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1409</strong></td><td>2026-03-24</td><td>기타</td><td>이 화면에서 다음 에피소드가 나오지 않습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1409">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 이 화면에서 다음 에피소드가 나오지 않습니다.
+날짜가 지나면 오픈되는 건가요?</div></td></tr><tr class="tr " onclick="document.getElementById('t1422').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1422</strong></td><td>2026-03-25</td><td>기타</td><td>며칠 전에 보낸 건은 어떻게 되었나요?</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1422">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 며칠 전에 보낸 건은 어떻게 되었나요?
+접수번호 0028413483</div></td></tr><tr class="tr " onclick="document.getElementById('t1453').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1453</strong></td><td>2026-03-28</td><td>상점</td><td>이미 꽃봉오리, 새싹을 전부 클리어한 사람들에게는 다이아를 받을 수 있게 해주셨으면 합니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1453">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 이미 꽃봉오리, 새싹을 전부 클리어한 사람들에게는 다이아를 받을 수 있게 해주셨으면 합니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1454').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1454</strong></td><td>2026-03-28</td><td>일반 아이템 구매 및 사용</td><td>틀 안의 아이템? 물음표?가 어떤 역할을 하는지 모르겠습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1454">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 틀 안의 아이템? 물음표?가 어떤 역할을 하는지 모르겠습니다.
+예를 들면 칼 모양 마크나 몇 % 같은 것들, 다른 종류도요.
+어디엔가 설명이 나와 있나요?</div></td></tr><tr class="tr " onclick="document.getElementById('t1458').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1458</strong></td><td>2026-03-28</td><td>상점</td><td>2270을 클리어하기가 너무 어렵습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1458">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 2270을 클리어하기가 너무 어렵습니다.
+위쪽 가운데 바위가 부서지지 않아서 오래 플레이해도 안 되었고, 결국 다이아 20개를 2번이나 과금했습니다.
+힐링 게임이어야 할 존재가 스트레스가 되고 있습니다.
+과금시키기 위해서라 해도, 조금 더 플레이어를 배려한 게임 제작을 부탁드립니다.
+솔직히 금액을 돌려받고 싶습니다…</div></td></tr><tr class="tr " onclick="document.getElementById('t1462').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1462</strong></td><td>2026-03-28</td><td>친구 초대</td><td>친구에게 클로버를 보낼 때 작업 효율을 올리고 싶어서,</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1462">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 친구에게 클로버를 보낼 때 작업 효율을 올리고 싶어서,
+보낸 후 뜨는 ‘보냈습니다’에 ‘확인’을 눌러야 하는 사양을 없애주셨으면 합니다.
+부탁하기 기능 때는 그 과정이 없는 것 같은데, 그렇게 해주시면 효율이 올라 더 즐겁게 플레이할 수 있을 것 같습니다.
+답장은 필요 없습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1471').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1471</strong></td><td>2026-03-29</td><td>기타</td><td>화면을 스크롤할 때 양쪽 아이콘이 사라지는 기능이 있었는데, 작동하지 않게 되었습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1471">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 화면을 스크롤할 때 양쪽 아이콘이 사라지는 기능이 있었는데, 작동하지 않게 되었습니다.
+굉장히 좋았던 기능인데, 다시 작동하게 하는 방법을 알려주셨으면 합니다.
+의도적으로 없앤 것이라면, 설정에서 ON/OFF 가능하게 추가할 수 있을까요?
+그리고 LINE 게임이니 문의도 메일이 아니라 LINE으로 할 수는 없나요?
+이상 2가지 확인 부탁드립니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1482').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1482</strong></td><td>2026-03-29</td><td>기타</td><td>2월 도라에몽 영화 콜라보 기획의 앙코르 재실시를 희망합니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1482">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 2월 도라에몽 영화 콜라보 기획의 앙코르 재실시를 희망합니다.
+검토 부탁드립니다.</div></td></tr></tbody></table></div></td></tr><tr>
+<td><span class="bg"><span class="dt" style="background:#e74c3c"></span>💎 아이템/보상 소실</span></td>
+<td><button class="cn" style="background:#fdecea;color:#e74c3c" onclick="document.getElementById('d4').classList.toggle('on')">9건</button></td>
+<td class="pc">8.7%</td>
+<td><div class="bw"><div class="br" style="width:38%;background:#e74c3c"></div></div></td>
+</tr>
+<tr><td colspan="4" style="padding:0"><div class="dl" id="d4"><table>
+<thead><tr><th>번호</th><th>날짜</th><th>원래 분류</th><th>요약</th></tr></thead><tbody><tr class="tr " onclick="document.getElementById('t1392').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1392</strong></td><td>2026-03-23</td><td>메시지 박스</td><td>80개 이상 남아 있었어야 할 클로버가 2개밖에 남아 있지 않습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1392">문제 발생 일시: 3/23 09:00경
+문제 발생 장면: 클로버 잔량
+에러 메시지: 없음
+상세: 80개 이상 남아 있었어야 할 클로버가 2개밖에 남아 있지 않습니다.
+이전에도 같은 일이 있었습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1401').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1401</strong></td><td>2026-03-24</td><td>상점</td><td>답변 감사합니다. 소비된 다이아를 즉시 반환해 주세요.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1401">발생 중인 문제: 기타
+구매일시 / 발생일시: 3월 23일
+상세: 답변 감사합니다. 소비된 다이아를 즉시 반환해 주세요.</div></td></tr><tr class="tr " onclick="document.getElementById('t1404').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1404</strong></td><td>2026-03-24</td><td>상점</td><td>아까 사무국의 답변 이미지입니다. 그쪽 과실이니 소비한 다이아 반환 및 아이템 반환을 요구합니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1404">문제 발생 일시: 3월 23일
+문제 발생 장면: 다이아로 연장 중
+에러 메시지: 문제 발생 때문에
+상세: 아까 사무국의 답변 이미지입니다. 그쪽 과실이니 소비한 다이아 반환 및 아이템 반환을 요구합니다.
+이전에 신고한 건은 포기하겠지만, 이번에는 성의 있는 대응을 원합니다.</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1412').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1412</strong></td><td>2026-03-24</td><td>상점</td><td>휴대폰을 바꿔 데이터 이전을 했더니 다이아 외에는 이전 전 상태 그대로인데,</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1412">문제 발생 일시: 3월 24일
+문제 발생 장면: LINE 포코포코의 다이아
+에러 메시지: 다이아가 0이 되어 있었다
+상세: 휴대폰을 바꿔 데이터 이전을 했더니 다이아 외에는 이전 전 상태 그대로인데,
+다이아만 약 1200개 있던 것이 0이 되어 있었습니다.</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1413').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1413</strong></td><td>2026-03-24</td><td>상점</td><td>다이아를 사용하지 않았는데 0이 되어 있었습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1413">문제 발생 일시: 3/23
+문제 발생 장면: 다이아가 0이 되어 있었다
+에러 메시지: 없음
+상세: 다이아를 사용하지 않았는데 0이 되어 있었습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1431').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1431</strong></td><td>2026-03-26</td><td>상점</td><td>발생 중인 문제: 기타</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1431">발생 중인 문제: 기타
+문제 상세: 2025/03/24에 Android에서 iPhone으로 바꿨더니, 지금까지 모아뒀던 다이아가 전부 없어졌습니다.
+체리나 체리로 교환한 클로버 등은 인계되었는데 다이아만 없어졌습니다.
+400개 이상 있었으니 원래대로 돌려주셨으면 합니다.</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1446').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1446</strong></td><td>2026-03-27</td><td>상점</td><td>사용하지 않았는데 전날 있던 다이아가 0이 되었습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1446">문제 발생 일시: 2026.03.26
+문제 발생 장면: 다이아가 전부 사라졌습니다. 30개 이상은 있었습니다.
+에러 메시지: 없음
+상세: 사용하지 않았는데 전날 있던 다이아가 0이 되었습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1449').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1449</strong></td><td>2026-03-27</td><td>상점</td><td>오늘 다이아가 50개 정도 줄었는데 사용한 기억이 전혀 없습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1449">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 오늘 다이아가 50개 정도 줄었는데 사용한 기억이 전혀 없습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1452').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1452</strong></td><td>2026-03-27</td><td>메시지 박스</td><td>도라에몽(해저귀암성) 이벤트에서 모험 동료로 도라에몽을 2번 획득했습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1452">문제 발생 일시: 3월 27일 23:45경
+문제 발생 장면: 모험 동료들 화면
+에러 메시지: 없음
+상세: 도라에몽(해저귀암성) 이벤트에서 모험 동료로 도라에몽을 2번 획득했습니다.
+3월 27일 23:45경 앱에 로그인했더니 선물에 동료 획득 정보가 있어 받아보니 도라에몽(해저귀암성)이었습니다.
+획득했지만 획득 횟수가 2회에서 1회로 줄어 있었고 체력도 줄어 있었습니다.
+힘들게 획득했는데 줄어든 이유를 모르겠습니다.
+답변 부탁드립니다.</div></td></tr></tbody></table></div></td></tr><tr>
+<td><span class="bg"><span class="dt" style="background:#d4740e"></span>📺 광고</span></td>
+<td><button class="cn" style="background:#fef6ed;color:#d4740e" onclick="document.getElementById('d5').classList.toggle('on')">8건</button></td>
+<td class="pc">7.7%</td>
+<td><div class="bw"><div class="br" style="width:33%;background:#d4740e"></div></div></td>
+</tr>
+<tr><td colspan="4" style="padding:0"><div class="dl" id="d5"><table>
+<thead><tr><th>번호</th><th>날짜</th><th>원래 분류</th><th>요약</th></tr></thead><tbody><tr class="tr " onclick="document.getElementById('t1382').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1382</strong></td><td>2026-03-23</td><td>광고 관련</td><td>클로버가 다 떨어진 뒤 광고를 보면 클로버를 주는데, 저는 2번밖에 못 합니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1382">해당 항목을 선택해 주세요: 게임에 관한 의견
+상세: 클로버가 다 떨어진 뒤 광고를 보면 클로버를 주는데, 저는 2번밖에 못 합니다.
+인터넷에서 찾아보고 재설치도 해봤지만 달라지지 않았습니다.
+제 아내는 5번 정도 할 수 있었고, 시청 횟수에 따라 15분 무료 바도 떴습니다.
+저는 그게 뜨지 않습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1385').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1385</strong></td><td>2026-03-23</td><td>광고 관련</td><td>해당 항목을 선택해 주세요: 광고에 관한 의견</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1385">해당 항목을 선택해 주세요: 광고에 관한 의견
+문제 개요: 기타
+광고 확인 일시: 3/23 11시경
+광고 기업 또는 사이트명: 용기에 색이 들어가 있는 그거
+광고 상세: 긴 건 어쩔 수 없지만, 마지막에 계속 닫을 수 없는 광고는 정말 그만해 주세요.</div></td></tr><tr class="tr " onclick="document.getElementById('t1386').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1386</strong></td><td>2026-03-23</td><td>광고 관련</td><td>해당 항목을 선택해 주세요: 광고에 관한 의견</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1386">해당 항목을 선택해 주세요: 광고에 관한 의견
+문제 개요: 기타
+광고 확인 일시: 방금 전에 보냈습니다
+광고 기업 또는 사이트명: 방금 전에 보냈습니다
+광고 상세: 지금 확인해보니 광고가 닫히지 않았고, 한 번 다시 들어갔다가 보니 사용했던 체리도 없어졌습니다. 최악의 광고, 최악의 시스템입니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1388').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1388</strong></td><td>2026-03-23</td><td>광고 관련</td><td>해당 항목을 선택해 주세요: 광고에 관한 의견</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1388">해당 항목을 선택해 주세요: 광고에 관한 의견
+문제 개요: 불쾌한 광고가 나옴
+광고 확인 일시: 3월 22일
+광고 기업 또는 사이트명: 도쿄 디방커
+광고 상세: 광고 내용이 징그럽고 불쾌합니다.
+필요 이상으로 같은 광고가 너무 자주 나옵니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1416').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1416</strong></td><td>2026-03-25</td><td>광고 관련</td><td>해당 항목을 선택해 주세요: 광고에 관한 의견</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1416">해당 항목을 선택해 주세요: 광고에 관한 의견
+문제 개요: 기타
+광고 확인 일시: 3/25 12:30
+광고 기업 또는 사이트명: 모름
+광고 상세: 안 닫히는 광고 좀 그만 틀어주세요!!!</div></td></tr><tr class="tr " onclick="document.getElementById('t1425').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1425</strong></td><td>2026-03-26</td><td>메시지 박스</td><td>동일</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1425">문제 발생 일시: 3/26 24:39
+문제 발생 장면: 플레이 후 한 수만 더 두면 되는 상황에서 사과가 없어져, 광고를 보고 사과 3개를 추가할 수 있어서 광고를 선택했지만 5분이 지나도 게임 화면으로 돌아오지 않았습니다.
+광고를 5분이나 틀어놨으니 운영에는 보상이 들어가겠죠.
+게임을 다시 시작했지만 원상복구되지 않았습니다.
+사기인가요? 어떻게 하실 건가요? 사기가 아니라면 같은 상태로 다시 시작하게 해 주세요.
+이런 현상이 자주 발생하는데 어떤 대응을 하고 있는지 답변을 요구합니다.
+‘오리파’라는, 딱 봐도 사기 같아 보이는 사이트 광고입니다.
+에러 메시지: 없음
+상세: 동일</div></td></tr><tr class="tr " onclick="document.getElementById('t1428').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1428</strong></td><td>2026-03-26</td><td>광고 관련</td><td>해당 항목을 선택해 주세요: 광고에 관한 의견</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1428">해당 항목을 선택해 주세요: 광고에 관한 의견
+문제 개요: 기타
+광고 확인 일시: 3/26 11:00
+광고 기업 또는 사이트명: 야암 피버
+광고 상세: 몇 분이 지나도 안 닫히는 광고, 제발 그만 내보내세요!!!!!
+똑같은 걸 몇 번이나 신고해야 하나요!!</div></td></tr><tr class="tr " onclick="document.getElementById('t1475').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1475</strong></td><td>2026-03-29</td><td>광고 관련</td><td>해당 항목을 선택해 주세요: 광고에 관한 의견</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1475">해당 항목을 선택해 주세요: 광고에 관한 의견
+문제 개요: 불쾌한 광고가 나옴
+광고 확인 일시: 항상
+광고 기업 또는 사이트명: Google 앱
+광고 상세: 동영상을 시청하면 아이템을 받을 수 있는 구조인데, Google 앱 다운로드 페이지까지 넘어가야 보상으로 이어지는 건 유도당하는 느낌이라 불쾌하고, 아이에게 안심하고 시키기 어렵습니다.</div></td></tr></tbody></table></div></td></tr><tr>
+<td><span class="bg"><span class="dt" style="background:#6c3483"></span>🔄 계정/데이터</span></td>
+<td><button class="cn" style="background:#f0e6f6;color:#6c3483" onclick="document.getElementById('d6').classList.toggle('on')">5건</button></td>
+<td class="pc">4.8%</td>
+<td><div class="bw"><div class="br" style="width:21%;background:#6c3483"></div></div></td>
+</tr>
+<tr><td colspan="4" style="padding:0"><div class="dl" id="d6"><table>
+<thead><tr><th>번호</th><th>날짜</th><th>원래 분류</th><th>요약</th></tr></thead><tbody><tr class="tr " onclick="document.getElementById('t1391').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1391</strong></td><td>2026-03-23</td><td>기타</td><td>발생 중인 문제: 기타</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1391">발생 중인 문제: 기타
+문제 상세: LINE에 등록된 사용자명이 표시되어 버립니다.
+변경하는 방법을 알려주세요.</div></td></tr><tr class="tr " onclick="document.getElementById('t1407').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1407</strong></td><td>2026-03-24</td><td>메시지 박스</td><td>발생 중인 문제: 기타</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1407">발생 중인 문제: 기타
+문제 상세: 알림이나 LINE 메시지 등을 꺼두고 있는데도 친구에게 클로버를 보낼 때마다 매번 알림이 전송됩니다.
+평소 대화에 방해가 되니 어떻게 좀 해주셨으면 하는데, 방법이 없나요?</div></td></tr><tr class="tr " onclick="document.getElementById('t1424').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1424</strong></td><td>2026-03-26</td><td>기타</td><td>발생 중인 문제: 기타</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1424">발생 중인 문제: 기타
+문제 상세: Google 계정이 정지되어 과금할 수 없는 상태입니다.
+현재는 LINE 계정으로 게임 데이터를 이용하고 있습니다.
+다른 Google 계정으로 과금할 수 있도록 변경하는 것이 가능할까요?</div></td></tr><tr class="tr " onclick="document.getElementById('t1433').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1433</strong></td><td>2026-03-26</td><td>기타</td><td>발생 중인 문제: 기타</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1433">발생 중인 문제: 기타
+문제 상세: LINE 계정을 탈취당해 새 LINE 계정을 등록했습니다.
+그 때문에 LINE 포코포코에 로그인할 수 없어 새로 설치했습니다.
+LINE과 LINE 만화는 유료 아이템을 이전해 주셨기 때문에, LINE 포코포코도 이전 계정을 인계할 수 있는지 확인 부탁드립니다. 잘 부탁드립니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1479').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1479</strong></td><td>2026-03-29</td><td>기타</td><td>발생 중인 문제: 게임 데이터 인계 방법을 모르겠음</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1479">발생 중인 문제: 게임 데이터 인계 방법을 모르겠음
+인계하고 싶은 게임 데이터의 로그인 방법: 게스트 로그인
+인계하고 싶은 게임 데이터를 플레이 중인 기기: iPhone / iPad</div></td></tr></tbody></table></div></td></tr><tr>
+<td><span class="bg"><span class="dt" style="background:#148f77"></span>🎁 보상 미수령</span></td>
+<td><button class="cn" style="background:#edf8f5;color:#148f77" onclick="document.getElementById('d7').classList.toggle('on')">5건</button></td>
+<td class="pc">4.8%</td>
+<td><div class="bw"><div class="br" style="width:21%;background:#148f77"></div></div></td>
+</tr>
+<tr><td colspan="4" style="padding:0"><div class="dl" id="d7"><table>
+<thead><tr><th>번호</th><th>날짜</th><th>원래 분류</th><th>요약</th></tr></thead><tbody><tr class="tr " onclick="document.getElementById('t1405').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1405</strong></td><td>2026-03-24</td><td>메시지 박스</td><td>도라에몽 1만 리포스트 보상이 오지 않았습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1405">문제 발생 일시: 모르겠습니다
+문제 발생 장면: 도라에몽 이벤트
+에러 메시지: 없음
+상세: 도라에몽 1만 리포스트 보상이 오지 않았습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1417').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1417</strong></td><td>2026-03-25</td><td>메시지 박스</td><td>포코숲 리그에서 1위가 되었는데 작은 도넛이 어디에도 보이지 않습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1417">문제 발생 일시: 20260325 12:18
+문제 발생 장면: 포코숲 리그 1위 상품 수령
+에러 메시지: 없음
+상세: 포코숲 리그에서 1위가 되었는데 작은 도넛이 어디에도 보이지 않습니다.
+랭킹 프레임은 받았는데, 랭킹 아래 굴러가는 곳에도 없고, 포케코코로 목록에도 도넛이 없습니다.
+대체 어디에 있나요?</div></td></tr><tr class="tr sm" onclick="document.getElementById('t1418').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1418</strong></td><td>2026-03-25</td><td>메시지 박스</td><td>포코숲 리그에서 1위를 했는데 월드맵 이펙트를 받지 못했습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1418">문제 발생 일시: 3/25 11시
+문제 발생 장면: 포코숲 리그 보상 관련
+에러 메시지: 없음
+상세: 포코숲 리그에서 1위를 했는데 월드맵 이펙트를 받지 못했습니다.
+열심히 해서 1위를 했는데 너무 아쉽습니다.
+확인 부탁드립니다.</div></td></tr><tr class="tr sm" onclick="document.getElementById('t1426').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1426</strong></td><td>2026-03-26</td><td>메시지 박스</td><td>아냐에게서 받아야 할 클로버를 받지 못했고, 대신 시간 카운트가 진행되고 있습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1426">문제 발생 일시: 3월 26일 6시 00분
+문제 발생 장면: 홈 화면
+에러 메시지: 없음
+상세: 아냐에게서 받아야 할 클로버를 받지 못했고, 대신 시간 카운트가 진행되고 있습니다.
+지금까지 못 받은 만큼 보상해 주세요.</div></td></tr><tr class="tr sm" onclick="document.getElementById('t1465').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1465</strong></td><td>2026-03-28</td><td>메시지 박스</td><td>아냐의 클로버를 받지 못했습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1465">문제 발생 일시: 3월 28일 18:12
+문제 발생 장면: 홈 화면
+에러 메시지: 없음
+상세: 아냐의 클로버를 받지 못했습니다.</div></td></tr></tbody></table></div></td></tr><tr>
+<td><span class="bg"><span class="dt" style="background:#7f8c8d"></span>📋 기타</span></td>
+<td><button class="cn" style="background:#f0f0f0;color:#7f8c8d" onclick="document.getElementById('d8').classList.toggle('on')">5건</button></td>
+<td class="pc">4.8%</td>
+<td><div class="bw"><div class="br" style="width:21%;background:#7f8c8d"></div></div></td>
+</tr>
+<tr><td colspan="4" style="padding:0"><div class="dl" id="d8"><table>
+<thead><tr><th>번호</th><th>날짜</th><th>원래 분류</th><th>요약</th></tr></thead><tbody><tr class="tr " onclick="document.getElementById('t1436').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1436</strong></td><td>2026-03-26</td><td>메시지 박스</td><td>포코숲 리그는 내일까지인데 승리해도 결과가 반영되지 않고, 나뭇잎 표시도 붙지 않습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1436">문제 발생 일시: 3월 26일 18시경
+문제 발생 장면: 포코숲 리그에 결과가 반영되지 않습니다
+에러 메시지: 없음
+상세: 포코숲 리그는 내일까지인데 승리해도 결과가 반영되지 않고, 나뭇잎 표시도 붙지 않습니다.</div></td></tr><tr class="tr sm" onclick="document.getElementById('t1437').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1437</strong></td><td>2026-03-26</td><td>메시지 박스</td><td>이번만의 일이 아닙니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1437">문제 발생 일시: 2026326
+문제 발생 장면: 이번에는 모험에서 발생
+에러 메시지: 짜증나, 몰라
+상세: 이번만의 일이 아닙니다.
+귀중한 아이템을 쓰고 게임이 시작되기 전에 버그가 나서 초기 화면으로 돌아갑니다.
+아이템도 클로버도 사용된 상태입니다.
+몇 번이나 버그나고 얼마나 연결이 안 되는 건가요?
+적당히 좀 해 주세요.
+과금만 시켜놓고 장난하냐, 이런 생각까지 듭니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1444').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1444</strong></td><td>2026-03-27</td><td>메시지 박스</td><td>없음</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1444">문제 발생 일시: 2026.3
+문제 발생 장면: Wi‑Fi를 사용하고 있으면 열리지 않습니다.
+사용하지 않아도 complete 상태에 도달하기까지 시간이 걸립니다.
+에러 메시지: 없음
+상세: 없음</div></td></tr><tr class="tr sh" onclick="document.getElementById('t1460').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1460</strong></td><td>2026-03-28</td><td>메시지 박스</td><td>도라에몽 캐릭터가 2번 중복되었는데 체력이 전혀 증가하지 않습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1460">문제 발생 일시: 3월 28일 13시 40분경
+문제 발생 장면: 모험 캐릭터 레벨업 시
+에러 메시지: 없음
+상세: 도라에몽 캐릭터가 2번 중복되었는데 체력이 전혀 증가하지 않습니다.</div></td></tr><tr class="tr " onclick="document.getElementById('t1467').classList.toggle('on')">
+<td><strong style="color:#2c6e3f">#1467</strong></td><td>2026-03-28</td><td>메시지 박스</td><td>도라에몽 해저귀암성 이벤트에서 과금하고 아이템도 써서 도라에몽을 총 3체 얻었는데, 동료 리스트에는 1체만 남아 있습니다.</td>
+</tr><tr><td colspan="4" style="padding:0"><div class="td" id="t1467">문제 발생 일시: 3/28 13:00경 발견
+문제 발생 장면: 도라에몽 해저귀암성 이벤트 / 동료 리스트
+에러 메시지: 없음
+상세: 도라에몽 해저귀암성 이벤트에서 과금하고 아이템도 써서 도라에몽을 총 3체 얻었는데, 동료 리스트에는 1체만 남아 있습니다.</div></td></tr></tbody></table></div></td></tr></tbody></table></div></div><div class="ft">Generated 2026. 4. 2. · CS Auto Classifier</div></div></body></html>
